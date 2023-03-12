@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Task Home Function</title>
+    <!-- <script src="func-1.js"></script> -->
+    <!-- <script src="func-2.js"></script> -->
+    <script src="challenge-1.js"></script>
+    <!-- <script src="challenge-2.js"></script> -->
+    <link rel="stylesheet" href="style-task-3.css">
+</head>
+<body>
+    
+    <h2>Task 3-question 1</h2>
+    <button onclick="checkMyArr()">Try it: Q-1</button>
+    
+    <p id="lesson-03-task-03-Q1-1">Original Arr :</p>
+    <p id="lesson-03-task-03-Q1-2">Start with 'a' or 'A' :</p>
+    
+    <script>
+        
+                function checkMyArr() {
+                    const arr2 = ['strawberry', 'banana', 'apple' , 'dragonfruit', 'Apple' , 'cherry']
+                    const newArr = []
+                    function checkArrWord() {
+                        var chToCheck = prompt('Please type a char :')
+                        for (let i = 0; i < arr2.length; i++) {
+                            const checkWord = arr2[i];
+                                for (let j = 0; j < 1; j++) {
+                            
+                                    if (((checkWord.startsWith('a')) == true) || ((checkWord.startsWith('A')) == true) ) {
+                                        newArr.push(checkWord);
+                                    }
+                                }
+                        }
+                    }checkArrWord(arr2);
+                    debugger;
+                    document.getElementById("lesson-03-task-03-Q1-1").innerHTML = arr2;
+                    debugger;
+                    document.getElementById("lesson-03-task-03-Q1-2").innerHTML = newArr;
+                    // return newArr;
+                }
+        
+    </script>
+
+
+    <h2>Task 3-question 2</h2>
+    <button onclick="checkOddNumber()">Try it: Q-2</button>
+    
+    <p id="lesson-03-task-03-Q2-1">Odd num is : </p>
+    <p id="lesson-03-task-03-Q2-2">Even Num is : </p>
+        <script>
+            
+            function checkOddNumber() {
+                const numArr = [1,2,4,5,7,8,9,12,14,16,11,13,19]
+
+                    debugger;
+                    let newOddArr = []
+                    let newEveArr = []
+                    const sizeOfArr = numArr.length
+
+                        for (let i = 0; i < sizeOfArr; i++) {
+                            const oddNumber = numArr[i];
+                            if (oddNumber % 2 ===0) {
+                                newOddArr.push(oddNumber);
+                            }else{
+                                newEveArr.push(oddNumber);
+                                
+                            }   
+                        }
+            document.getElementById("lesson-03-task-03-Q2-2").innerHTML = newOddArr;
+            document.getElementById("lesson-03-task-03-Q2-1").innerHTML = newEveArr;
+            }
+        </script>
+
+</body>
+</html>
